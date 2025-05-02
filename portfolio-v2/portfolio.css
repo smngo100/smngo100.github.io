@@ -213,5 +213,5 @@ a {
 
 .content-card:hover,
 .skills-card:hover {
-    margin-top: -5px;
+    transform: translate(0, -5px);
 }

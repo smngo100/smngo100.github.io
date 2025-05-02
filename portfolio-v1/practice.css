@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+}
+
+body {
+    color: black;
+    text-align: center;
+    line-height: 23px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(228, 228, 228);
+    height: 70px;
+
+    padding: 0 20px 0 20px;
+    position: sticky;
+    top: 0;
+}
+
+.linkedin-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.waving-animals {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.content-as-a-whole {
+    margin: 20px 0 20px 0;
+}
+
+#my-journey-page,
+#beyond-code-page, 
+#skills-page {
+    margin: 100px 0 100px 0;
+}
+
+.beyond-code-text {
+    padding-bottom: 50px
+}
+
+.beyond-code-images-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0;
+   row-gap: 20px;
+   width: 600px;
+   margin: 10px auto;
+}
+
+.beyond-code-interests {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0; 
+    padding: 0;
+}
+
+.skill-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 400px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.programming-language-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

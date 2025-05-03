@@ -215,3 +215,7 @@ a {
 .skills-card:hover {
     transform: translate(0, -5px);
 }
+
+.tech-tags {
+    display: flex;
+}

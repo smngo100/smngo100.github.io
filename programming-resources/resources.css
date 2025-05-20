@@ -1,19 +1,27 @@
 * {
-    margin: 0;
     padding: 0;
-}
-
-.p {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .header {
-    height: 100px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: lightblue;
+    justify-content: space-around;
 
-    padding: 0 20px 0 20px;
+    border-bottom: solid gray;
+    padding: 20px 0 20px 0;
+}
+
+.welcome-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.welcome-blurb { 
+    margin-top: 20px;
+    line-height: 30px;
 }

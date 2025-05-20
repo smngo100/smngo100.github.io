@@ -1,0 +1,107 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.surface {
+    height: 300px;
+    background-color: #b5e2ff;
+    padding: 20px 0 0 20px;
+}
+
+.sun {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 0 80px rgb(181, 183, 30);
+}
+
+.ocean {
+    height: 40000px;
+    background-color: #0066cc;
+    /*background-image: linear-gradient(
+        #0066cc,
+        #005cb8,
+        #0052a3,
+        #00478f, 
+        #003d7a,
+        #003366,
+        #002952,
+        #001f3d,
+        #001429,
+        #000a14
+    );*/
+    background-image: linear-gradient(
+        #0079c7,
+        #006fb8,
+        #0066cc,
+        #0065a8,
+        #005cb8,
+        #005b99,
+        #0052a3,
+        #00518a,
+        #00478f,
+        #00477a,
+        #003d7a,
+        #003d6b,
+        #003366,
+        #00335c,
+        #002952,
+        #00294d,
+        #001f3d,
+        #001f3d,
+        #001429,
+        #000a14
+    );
+    display: flex;
+    flex-direction: column;
+}
+
+.epipelagic-zone {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 20px 20px 20px;
+}
+
+.seagull {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -50px;
+    left: 400px;
+}
+
+.seagull-name {
+    position: absolute;
+}
+
+.marine-life-container {
+    margin: 70px;
+}
+
+.animal-name {
+    color: white;
+}
+
+.whales,
+.sharks {
+    width: 400px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.animal-name {
+    text-align: center;
+}
+
+.fish {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+}
+

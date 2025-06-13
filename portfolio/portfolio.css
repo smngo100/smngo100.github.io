@@ -1,210 +1,210 @@
 /*
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-    font-family: Arial;
-    line-height: 1.6;
+  font-family: Arial;
+  line-height: 1.6;
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
 .header {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 0 5%;
-    background-color: white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: rgb(228, 228, 228);
+  padding: 0 5%;
+  background-color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(228, 228, 228);
 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .left-section {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .middle-section {
-    display: flex;
-    gap: clamp(30px, 5vw, 100px);
+  display: flex;
+  gap: clamp(30px, 5vw, 100px);
 }
 
 .socials {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .social-media-icons {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .main-information-content {
-    margin-top: 200px;
-    padding: 0 5%;
+  margin-top: 200px;
+  padding: 0 5%;
 }
 
 .home-page-content,
 #my-journey-page-content,
 #beyond-code-page-content,
 #skills-page-content {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto 100px auto;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 100px auto;
 }
 
 .pfp {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .hello {
-    font-size: clamp(28px, 5vw, 35px);
-    margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 35px);
+  margin-bottom: 10px;
 }
 
 .introduction-description {
-    display: flex;
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 200px;
+  display: flex;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 200px;
 }
 
 .my-journey-label, 
 .beyond-code-label,
 .skills-label {
-    font-size: 30px;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
+  font-size: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
 }
 
 .my-journey-description,
 .beyond-code-description,
 .interests-content,
 .skills-description {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .my-journey-description, 
 .beyond-code-description, 
 .skills-description {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .my-journey-description {
-    width: 570px;
-    margin: 0 auto;
-    border-width: 1px;
-    text-align: justify;
+  width: 570px;
+  margin: 0 auto;
+  border-width: 1px;
+  text-align: justify;
 
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
-    margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
+  margin-bottom: 30px;
 }
 
 .project-content,
 .interests-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .content-card {
-    display: flex;
-    flex-direction: column;
-    width: 570px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
+  background-color: white;
 }
 
 .project-thumbnails,
 .interests-thumbnails {
-    width: 100%;
-    height: 320px;
-    object-fit: fill;
+  width: 100%;
+  height: 320px;
+  object-fit: fill;
 }
 
 .project-description,
 .interests-description {
-    padding: 15px; 
-    text-align: left;
+  padding: 15px; 
+  text-align: left;
 }
 
 .beyond-code-description {
-    display: flex;
-    width: 500px;
-    margin: 0 auto 30px auto;
+  display: flex;
+  width: 500px;
+  margin: 0 auto 30px auto;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 35px 1px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px 1px;
+  justify-items: center;
 }
 
 .skills-card {
-    background-color: white;
-    width: 140px;
-    height: 180px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.414);
+  background-color: white;
+  width: 140px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.414);
 }
 
 .content-card,
 .skills-card {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .programming-language-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 .content-card:hover,
 .skills-card:hover {
-    transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
 
 .tech-tags {
-    display: flex;
+  display: flex;
 }
 
 */
@@ -215,227 +215,264 @@ a {
 
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
+
 body {
-    font-family: Arial;
-    line-height: 1.6;
+  font-family: Arial;
+  line-height: 1.6;
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
 .header {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 0 5%;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: white;
+  padding: 0 5%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .left-section {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .middle-section {
-    display: flex;
-    gap: clamp(30px, 5vw, 100px);
+  display: flex;
+  gap: clamp(30px, 5vw, 100px);
 }
 
 .socials {
-    display: flex;
-    gap: 35px;
+  display: flex;
+  gap: 35px;
 }
 
 .social-media-icons {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .main-information-content {
-    margin-top: 200px;
-    padding: 0 5%;
+  margin-top: 200px;
+  padding: 0 5%;
 }
 
 .home-page-content,
 #my-journey-page-content,
 #beyond-code-page-content,
 #skills-page-content {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto 100px auto;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 100px auto;
 }
 
 .pfp {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .hello {
-    font-size: clamp(28px, 5vw, 35px);
-    margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 35px);
+  margin-bottom: 10px;
 }
 
 .introduction-description {
-    display: flex;
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 200px;
+  display: flex;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 200px;
 }
 
 .my-journey-label, 
 .beyond-code-label,
 .skills-label {
-    font-size: 30px;
-    margin-bottom: 30px;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .my-journey-description,
 .beyond-code-description,
 .interests-content,
 .skills-description {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .my-journey-description, 
 .beyond-code-description, 
 .skills-description {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .my-journey-description {
-    width: 570px;
-    margin: 0 auto;
-    border-width: 1px;
-    text-align: justify;
+  width: 570px;
+  margin: 0 auto;
+  border-width: 1px;
+  text-align: justify;
 
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
-    margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
+  margin-bottom: 30px;
 }
 
 .project-content,
 .interests-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 767px) {
-    .project-content, 
-    .interests-content {
-        grid-template-columns: 1fr;
-    }
+  .project-content, 
+  .interests-content {
+      grid-template-columns: 1fr;
+  }
 
-    .content-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-    }
+  .content-card {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+  }
 }
 
 .content-card {
-    display: flex;
-    flex-direction: column;
-    width: 570px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.414);
 }
 
 .project-thumbnails,
 .interests-thumbnails {
-    width: 100%;
-    height: 320px;
-    object-fit: fill;
+  width: 100%;
+  height: 320px;
+  object-fit: fill;
 }
 
 .project-description,
 .interests-description {
-    padding: 15px; 
-    text-align: left;
+  padding: 15px; 
+  text-align: left;
 }
 
 .beyond-code-description {
-    display: flex;
-    width: 500px;
-    margin: 0 auto 30px auto;
+  display: flex;
+  width: 500px;
+  margin: 0 auto 30px auto;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 35px 1px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px 1px;
+  justify-items: center;
 }
 
 .skills-card {
-    width: 140px;
-    height: 180px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.414);
+  width: 140px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.414);
 }
 
 .content-card,
 .skills-card {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .programming-language-icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 .content-card:hover,
 .skills-card:hover {
-    transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
 
 .tech-tags {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 .tech-tag {
-    background-color: #e6f0ff;
-    color: #4b83db;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    display: inline-block;
-    align-items: center;
+  background-color: #e6f0ff;
+  color: #4b83db;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  align-items: center;
+}
+
+
+/* Small tablets and larger mobile devices (481px - 768px) */
+@media (min-width: 581px) {
+  body {
+    font-size: 15px;
+    padding: 20px;
+  }
+}
+
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+    padding: 24px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Large desktops and high-resolution screens (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+    padding: 32px;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+    padding: 40px;
+    max-width: 70%;
+  }
 }

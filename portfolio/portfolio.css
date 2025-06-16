@@ -393,9 +393,11 @@ a {
 }
 
 .skills-grid {
+  width: 800px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 35px 1px;
+  gap: 35px;
   justify-items: center;
 }
 
@@ -441,38 +443,9 @@ a {
   align-items: center;
 }
 
-
-/* Small tablets and larger mobile devices (481px - 768px) */
-@media (min-width: 581px) {
-  body {
-    font-size: 15px;
-    padding: 20px;
-  }
-}
-
-/* Tablets and small laptops (769px - 1024px) */
-@media (min-width: 769px) {
-  body {
-    font-size: 16px;
-    padding: 24px;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-
-/* Large desktops and high-resolution screens (1025px and up) */
-@media (min-width: 1025px) {
-  body {
-    font-size: 18px;
-    padding: 32px;
-    max-width: 80%;
-  }
-}
-
-@media (min-width: 1440px) {
-  body {
-    font-size: 20px;
-    padding: 40px;
-    max-width: 70%;
-  }
-}
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }

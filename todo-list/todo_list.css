@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./images/lakeside-sunrise.png)
+  no-repeat center center/cover;
+}
+
+.todo-grid, 
+.todo-input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  gap: 30px;
+  align-items: center;
+}
+
+.todo-app {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+}
+
+.name-input, 
+.due-date-input,
+.add-todo-button {
+  color: gray;
+  border: none;
+  padding: 10px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
+  background: rgba(107, 149, 186, 0.3);
+}
+
+.name-input::placeholder {
+  color: gray;
+}
+
+.name-input, 
+.due-date-input {
+  color: black;
+}
+
+.title,
+.task-name, 
+.task-due-date {
+  color: black;
+}
+
+.add-todo-button,
+.delete-todo-button {
+  /*color: rgba(255, 255, 255, 0.579);*/
+  color: black;
+  border: none;
+  padding: 10px;
+  /*border-radius: 20px;*/
+  border-radius: 5px;
+}
+
+.add-todo-button {
+  background: rgb(93, 192, 98);
+}
+
+.delete-todo-button { 
+  background: rgb(192, 93, 93);
+}
+
+.add-todo-button,
+.delete-todo-button {
+  cursor: pointer;
+}

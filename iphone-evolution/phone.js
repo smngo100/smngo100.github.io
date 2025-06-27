@@ -269,26 +269,6 @@ Object.entries(iphoneData).forEach(([series, phonesArray]) => {
   phonesArray.forEach(iphone => {
     const { model, releaseDate, quote, image } = iphone;
   
-    /*
-    I removed the model container because it seemed unnecessary 
-    html += `
-      <div class="multiple-devices-container">
-        <div class="series-container">
-          <div class="model-container">
-            <div class="model-image-container">
-              <img class="model-image" src="${image}">
-            </div>
-            <div class="model-details">
-              <div class="iphone-model">${model}</div>
-              <div class="release-date">${releaseDate}</div>
-              <div class="quote">${quote}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    */
-
     html += `
       <div class="series-container">
         <div class="model-image-container">

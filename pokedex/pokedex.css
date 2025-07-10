@@ -102,6 +102,10 @@ body {
   height: 150px;
 }
 
+#pokemon-name {
+  margin-bottom: 10px;
+}
+
 .type-value, 
 .stats-value {
   padding: 3px;

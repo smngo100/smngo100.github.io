@@ -120,7 +120,7 @@ body {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
   .card-container {
     color: white;
-    width: 60%;
+    width: 65%;
     height: 100%;
   }
 }

@@ -8,16 +8,20 @@
   </head>
   <body>
 
-    <input type="text" id="search-input" placeholder="Enter Pokemon name">
-    <button onclick="fetchData()">Fetch Pokemon</button><br>
+    <div class="pokedex-container">
+      <div class="search-bar-container">
+        <input type="text" id="search-input" placeholder="Enter Pokemon name">
+        <button id="fetch-button" onclick="fetchData()">Fetch Pokemon</button>
+      </div>
 
-    <div id="pokemon-id"></div>
-    <img src="" alt="Pokemon Sprite" id="pokemon-sprite" style="display: none">
-    <div id="pokemon-name"></div>
-    <div id="type"></div>
-
-
-    <div id="stats"></div>
+      <div class="pokemon-container">
+        <div id="pokemon-id"></div>
+        <img src="" alt="Pokemon Sprite" id="pokemon-sprite" style="display: none">
+        <div id="pokemon-name"></div>
+        <div id="type"></div>
+        <div id="stats"></div>
+      </div>
+    </div>
 
     <script src="pokedex.js"></script>
   </body>

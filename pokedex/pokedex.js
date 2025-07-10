@@ -11,31 +11,13 @@ async function fetchData() {
     const data = await response.json();
 
     console.log(data); ////////////////////////////////////////
-    const pokemonSprite = data.sprites.front_default;
-    const pokemonId = data.id;
-    const pokemonType = data.types.map(typeInfo => typeInfo.type.name);
-    pokemonType.forEach(type => {
-      displayPokemonType(type);
-    });
 
-
-    let pokemonStatsNameHTML = '';
-    const pokemonStatsName = data.stats.map(statsInfo => statsInfo.stat.name);
-    pokemonStatsName.forEach(stat => {
-      pokemonStatsName += `<div class="pokemon-stats">${capitalizeFirstLetter(stat)}</div>`;
-      console.log(stat);
-    });
-
-    document.getElementById('stats').innerHTML = pokemonStatsNameHTML;
-    
-
-    displayPokemonSprite(pokemonSprite);
+    displayPokemonSprite(data);
     displayPokemonName(pokemonName);
-    displayPokemonID(pokemonId);
+    displayPokemonType(data);
+    displayPokemonID(data);
+    displayPokemonStats(data);
     // displayPokemonType(...pokemonType);
-
-
-
   }
   catch (error) {
     console.log(error);
@@ -45,7 +27,8 @@ async function fetchData() {
 // HANDLES DISPLAYING: 
 
 // Pokemon sprite
-function displayPokemonSprite(pokemonSprite) {
+function displayPokemonSprite(data) {
+  const pokemonSprite = data.sprites.front_default;
   const imgElement = document.getElementById("pokemon-sprite");
   imgElement.src = pokemonSprite;
   imgElement.style.display = "block";
@@ -58,20 +41,50 @@ function displayPokemonName(pokemonName) {
 }
 
 // Pokemon ID number
-function displayPokemonID(pokemonId) {
+function displayPokemonID(data) {
+  const lessThan100 = '00';
+  const greaterThan100 = '0';
+
+  let pokemonId = data.id;
   const displayId = document.getElementById('pokemon-id');
-  displayId.innerHTML = pokemonId;
+  // displayId.innerHTML = pokemonId;
+
+  if (pokemonId < 100) {
+    pokemonId = `${lessThan100}${pokemonId}`;
+    displayId.innerHTML = pokemonId;
+  } else if (pokemonId > 100 && pokemonId < 1000) {
+    pokemonId = `${greaterThan100}${pokemonId}`;
+    displayId.innerHTML = pokemonId;
+  } else {
+    displayId.innerHTML = pokemonId;
+  }
 }
 
 // Pokemon type
-function displayPokemonType(pokemonType) {
-  const displayType = document.getElementById('type');
-  displayType.innerHTML += `<div>${capitalizeFirstLetter(pokemonType)}</div>`;
+function displayPokemonType(data) {
+  let pokemonTypeHTML = '';
+
+  const pokemonType = data.types.map(typeInfo => typeInfo.type.name);
+  pokemonType.forEach(type => {
+    pokemonTypeHTML += `<div>${capitalizeFirstLetter(type)}</div>`;
+  });
+  document.getElementById('type').innerHTML = pokemonTypeHTML;
 }
 
-// Pokemon HP
-function displayPokemonHP() {
+// Pokemon stats
+function displayPokemonStats(data) {
+  let pokemonStatsNameHTML = '';
+  let baseStatsTotal = 0;
 
+  data.stats.forEach(statsInfo => {
+    const statsName = statsInfo.stat.name;
+    const baseStats = statsInfo.base_stat;
+
+    baseStatsTotal += baseStats;
+    pokemonStatsNameHTML += `<div class="pokemon-stats">${capitalizeFirstLetter(statsName)}: ${baseStats}</div>`;
+  });
+  pokemonStatsNameHTML += `<div>Total: ${baseStatsTotal}</div>`;
+  document.getElementById('stats').innerHTML = pokemonStatsNameHTML;
 }
 
 // Handle key down when user enters in input box

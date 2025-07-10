@@ -12,12 +12,7 @@ async function fetchData() {
 
     console.log(data); ////////////////////////////////////////
 
-    displayPokemonSprite(data);
-    displayPokemonName(pokemonName);
-    displayPokemonType(data);
-    displayPokemonID(data);
-    displayPokemonStats(data);
-    // displayPokemonType(...pokemonType);
+    displayPokemonInfo(data, pokemonName);
   }
   catch (error) {
     console.log(error);
@@ -29,63 +24,82 @@ async function fetchData() {
 // Pokemon sprite
 function displayPokemonSprite(data) {
   const pokemonSprite = data.sprites.front_default;
-  const imgElement = document.getElementById("pokemon-sprite");
-  imgElement.src = pokemonSprite;
-  imgElement.style.display = "block";
+  return pokemonSprite;
 }
 
 // Pokemon name
 function displayPokemonName(pokemonName) { 
-  const displayName = document.getElementById('pokemon-name');
-  displayName.innerHTML = capitalizeFirstLetter(pokemonName);
+  return capitalizeFirstLetter(pokemonName);
 }
 
 // Pokemon ID number
 function displayPokemonID(data) {
   const lessThan100 = '00';
   const greaterThan100 = '0';
-
   let pokemonId = data.id;
-  const displayId = document.getElementById('pokemon-id');
-  // displayId.innerHTML = pokemonId;
 
   if (pokemonId < 100) {
-    pokemonId = `${lessThan100}${pokemonId}`;
-    displayId.innerHTML = pokemonId;
+    return `${lessThan100}${pokemonId}`;
   } else if (pokemonId > 100 && pokemonId < 1000) {
-    pokemonId = `${greaterThan100}${pokemonId}`;
-    displayId.innerHTML = pokemonId;
+    return `${greaterThan100}${pokemonId}`;
   } else {
-    displayId.innerHTML = pokemonId;
+    return pokemonId;
   }
 }
 
-// Pokemon type
-function displayPokemonType(data) {
-  let pokemonTypeHTML = '';
-
+// Pokemon types
+function displayPokemonTypes(data) {
+  let pokemonTypesHTML = '';
+  
   const pokemonType = data.types.map(typeInfo => typeInfo.type.name);
   pokemonType.forEach(type => {
-    pokemonTypeHTML += `<div>${capitalizeFirstLetter(type)}</div>`;
+    pokemonTypesHTML += `<div class="type-value">${capitalizeFirstLetter(type)}</div>`;
   });
-  document.getElementById('type').innerHTML = pokemonTypeHTML;
+
+  return pokemonTypesHTML;
 }
 
 // Pokemon stats
 function displayPokemonStats(data) {
-  let pokemonStatsNameHTML = '';
+  let pokemonStatsGridHTML = '';
   let baseStatsTotal = 0;
 
   data.stats.forEach(statsInfo => {
     const statsName = statsInfo.stat.name;
     const baseStats = statsInfo.base_stat;
-
     baseStatsTotal += baseStats;
-    pokemonStatsNameHTML += `<div class="pokemon-stats">${capitalizeFirstLetter(statsName)}: ${baseStats}</div>`;
+
+    pokemonStatsGridHTML += `
+      <div class="stats-name">${capitalizeFirstLetter(statsName)}</div>
+      <div class="stats-value">${baseStats}</div>
+    `;
   });
-  pokemonStatsNameHTML += `<div>Total: ${baseStatsTotal}</div>`;
-  document.getElementById('stats').innerHTML = pokemonStatsNameHTML;
+  
+  pokemonStatsGridHTML += `<div>Total</div>`;
+  pokemonStatsGridHTML += `<div class="stats-value">${baseStatsTotal}</div>`;
+
+  return pokemonStatsGridHTML;
 }
+
+function displayPokemonInfo(data, pokemonName) {
+  const pokemonHTML = `
+    <div class="pokemon-top-profile-container">
+      <div id="pokemon-id">${displayPokemonID(data)}</div>
+      <img src="${displayPokemonSprite(data)}" alt="Pokemon Sprite" id="pokemon-sprite">
+      <h3 id="pokemon-name">${displayPokemonName(pokemonName)}</h3>
+    </div>
+    <div class="types-container">
+      <div>Type</div>
+      <div>${displayPokemonTypes(data)}</div>
+    </div>
+    <div class="pokemon-stats-grid">
+      ${displayPokemonStats(data)}
+    </div>
+  `;
+
+  document.querySelector('.pokemon-info-container').innerHTML = pokemonHTML;
+}
+
 
 // Handle key down when user enters in input box
 const inputElement = document.getElementById('search-input');

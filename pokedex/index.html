@@ -3,23 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PokeDex</title>
     <link rel="stylesheet" href="pokedex.css">
   </head>
   <body>
-
-    <div class="pokedex-container">
-      <div class="search-bar-container">
+    <div class="card-container">
+      <div class="search-container">
         <input type="text" id="search-input" placeholder="Enter Pokemon name">
-        <button id="fetch-button" onclick="fetchData()">Fetch Pokemon</button>
+        <button id="fetch-button" onclick="fetchData()">
+          <img src="images/pokeball.png" class="pokeball-image">
+        </button>
       </div>
 
-      <div class="pokemon-container">
-        <div id="pokemon-id"></div>
-        <img src="" alt="Pokemon Sprite" id="pokemon-sprite" style="display: none">
-        <div id="pokemon-name"></div>
-        <div id="type"></div>
-        <div id="stats"></div>
+      <div class="pokemon-info-container">
+        <!-- Generating html through js -->
       </div>
     </div>
 

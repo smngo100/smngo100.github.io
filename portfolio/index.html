@@ -1,140 +1,389 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title> Sophia's Portfolio </title>
-    <link rel="stylesheet" href="portfolio.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="header">
-      <div class="left-section">
-        <p><b> Sophia </b></p>
-      </div>
-      <div class="middle-section">
-        <a class="labels" href="#"><span class="material-symbols-outlined">home</span></a>              
-        <a class="labels" href="#my-journey-page-content"><span class="material-symbols-outlined">timeline</span> </a>
-        <a class="labels" href="#beyond-code-page-content"><span class="material-symbols-outlined">interests</span> </a>
-        <a class="labels" href="#skills-page-content"><span class="material-symbols-outlined">construction</span> </a>
-      </div>
-      <div class="right-section">
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/sophia-ngo-166a91358/" target="_blank">
-            <img class="social-media-icons" src="social_media_icons/linkedin.png">
-          </a>
-          <a href="https://github.com/smngo100" target="_blank">
-            <img class="social-media-icons" src="social_media_icons/github-mark.png">
-          </a>
+    <header>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#journey">My Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="parallax">
+        <img src="image_layers/1.png" id="layer1">
+        <div id="text" class="greeting">
+          <div class="first-line">Hello, I am</div>
+          <div class="second-line">SOPHIA</div>
         </div>
-      </div>
-    </div> 
-    <div class="main-information-content">
-      <div class="home-page-content">
-        <div class="profile-picture">
-          <img class="pfp" src="notion_pfp_transparent.png">
+        <img src="image_layers/2.png" id="clouds">
+        <img src="image_layers/3.png" id="foreground_trees">
+        <img src="image_layers/4.png" id="background_trees">
+      </section>
+
+      <section id="journey">
+        <div class="chapter">
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 1: Web Development</div>
+            <div class="timeline">March 2025</div>
+          </div>
+          <div class="chapter-content">
+            I stumbled upon an HTML & CSS introduction video and spontaneously
+            started it. Despite having CS coursework to focus on, I was immediately
+            hooked. I created small projects along the way, beginning with an
+            extremely simple photo gallery, and eventually building up to a PokéDex.
+          </div>
         </div>
-        <div class="hello"><b> Hello, I'm Sophia. </b></div>
-        <div class="introduction-description"> 
-          A second-year computer science major passionate about web development. Currently building my skills in HTML, CSS, JavaScript, and more.
+
+        <div class="chapter">
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 2: UI/UX</div>
+            <div class="timeline">August 2025</div>
+          </div>
+          <div class="chapter-content">
+            While finishing a JavaScript tutorial video, I stumbled into the
+            world of user experience and user interface design. Within a month,
+            I had explored the fundamentals—design process, information
+            architecture, usability testing, prototyping, and many more concepts.
+            I applied what I learned through projects and case studies,
+            discovering how design thinking could transform my approach to
+            building digital experiences.
+          </div>
         </div>
-      </div>
-      <div id="my-journey-page-content">
-        <div class="my-journey-label"><b> My Journey </b></div>
-        <div class="my-journey-description">
-          I am a second-year computer science major. In March 2025, I stumbled upon a HTML & CSS introduction video and spontaneously decided to 
-          start it despite needing to focus on my actual CS course materials. It was one of the best decisions I made, sparking my interest for 
-          web development. After I finished watching the introduction video, I created an extremely simple photo gallery. I am currently working 
-          on building my portfolio (this site). This portfolio reinforces what I learned by incorporating all the material from the introduction video; it also includes additional concepts. 
-          After building my portfolio, I'd like to learn JavaScript or TypeScript and a few frameworks. I'm excited for this new journey, and I wonder 
-          where this path will lead me. &#9825;
+
+        <div class="chapter">
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 3: The Journey Continues</div>
+            <div class="timeline">August 2025—Present</div>
+          </div>
+          <div class="chapter-content">
+            I am still focused on exploring more concepts in the fascinating
+            field of UI/UX. Currently streamlining my design workflow and
+            working as a UI/UX designer on a small development team at my school.
+          </div>
         </div>
-        <div class="project-content">
-          <div class ="content-card">
-            <a href="https://smngo100.github.io/photo-gallery/" target="_blank">
-              <img class="project-thumbnails" src="content_thumbnails/simple_photo_gallery.png">
-            </a>
-            <div class="project-description"> 
-              <h3> Simple Photo Gallery </h3>
-              <p> My first web project built after completing the HTML & CSS introduction tutorial. </p>
-              <!--
-              <div class="tech-tags">
-                <div class="tech-tag"> HTML </div>
-                <div class="tech-tag"> CSS </div>
+      </section>
+
+      <section id="skills">
+        <div class="row-icons">
+          <div class="icon-container">
+            <img src="skill_icons/plain/python-plain.svg"
+                 alt="Python programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/python.svg"
+                 alt="Python programming icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/java-plain.svg"
+                 alt="Java programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/java.svg"
+                 alt="Java programming icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/cplusplus-plain.svg"
+                 alt="C++ programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/cplusplus-original.svg"
+                 alt="C++ programming icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/javascript-plain.svg"
+                 alt="JavaScript programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/javascript.svg"
+                 alt="JavaScript programming icon"
+                 class="skill-icon icon-original">
+          </div>
+        </div>
+
+        <div class="row-icons">
+          <div class="icon-container">
+            <img src="skill_icons/plain/html5-plain.svg"
+                 alt="HTML5 programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/html5-original.svg"
+                 alt="HTML5 programming icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/css3-plain.svg"
+                 alt="CSS3 programming icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/css3-original.svg"
+                 alt="CSS3 programming icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/figma-plain.svg"
+                 alt="Figma design icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/figma-original.svg"
+                 alt="Figma design icon"
+                 class="skill-icon icon-original">
+          </div>
+
+          <div class="icon-container">
+            <img src="skill_icons/plain/photoshop-plain.svg"
+                 alt="Photoshop icon"
+                 class="skill-icon icon-plain">
+            <img src="skill_icons/original/photoshop-original.svg"
+                 alt="Photoshop icon"
+                 class="skill-icon icon-original">
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="category-title">Frontend</div>
+        <div class="category">
+          <a href="https://smngo100.github.io/photo-gallery"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/photo_gallery.png"
+                   alt="Photo Gallery project"
+                   class="project-cover"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Photo Gallery</div>
+                <div class="project-description">
+                  First web project built after completing the HTML & CSS
+                  introduction tutorial
+                </div>
               </div>
-              -->
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+              </div>
             </div>
-          </div>
-          <div class="content-card">
-            <a href="https://smngo100.github.io/portfolio-v2" target="_blank">
-              <img class="project-thumbnails" src="content_thumbnails/portfolio_website.png">
-            </a>
-            <div class="project-description">
-              <h3> Portfolio Website </h3>
-              <p> This website showcases my journey into web development. </p>
+          </a>
+
+          <a href="https://smngo100.github.io/todo-list/"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/todo_list.png"
+                   alt="Todo list project"
+                   class="project-cover"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Todo List</div>
+                <div class="project-description">
+                  Dynamic to-do list web application
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div> 
-      <div id="beyond-code-page-content">
-        <div class="beyond-code-label"><b> Beyond Code </b></div>
-        <div class="beyond-code-description">
-          In my free time, I enjoy playing games, watching anime, and going on walks. I love going on walks, especially after working on 
-          assignments for long hours in the library.
-        </div>
-        <div class="interests-content">
-          <div class="content-card">
-            <img class="interests-thumbnails" src="content_thumbnails/animes.png">
-            <div class="interests-description">
-              <b> Anime </b> <br>
-              Some of my favorite animes are Jujutsu Kaisen, Tokyo Ghoul, Hunter x Hunter, Solo Leveling, Saiki K, and Asobi Asobase. 
+          </a>
+
+          <a href="https://smngo100.github.io/iphone-evolution/"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/iphone_evolution.png"
+                   alt="iPhone Evolution project"
+                   class="project-cover"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">iPhone Evolution</div>
+                <div class="project-description">
+                  Documented the evolution of iPhone models
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
             </div>
-          </div>
-          <div class="content-card">
-            <img class="interests-thumbnails" src="content_thumbnails/games.png">
-            <div class="interests-description">
-              <b> Gaming </b> <br>
-              I enjoy playing various video games to unwind.
+          </a>
+
+          <a href="https://smngo100.github.io/dev-hub/"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/dev_hub.png"
+                   alt="Developer Resource Hub project"
+                   class="project-cover"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Developer Resource Hub</div>
+                <div class="project-description">
+                  Comprehensive resource hub for developer and designers
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
             </div>
-          </div>
-          <div class="content-card">
-            <img class="interests-thumbnails" src="content_thumbnails/nature.jpg">
-            <div class="interests-description">
-              <b> Nature Walks </b> <br>
-              Taking walks in nature helps me clear my mind.
+          </a>
+
+          <a href="https://smngo100.github.io/pokedex/"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/pokedex.png"
+                   alt="Pokédex project"
+                   class="project-cover">
+                    loading="lazy"
+                    decoding="async"
+              <div class="project-info">
+                <div class="project-title">Pokédex</div>
+                <div class="project-description">
+                  Fetched data through API to retrieve Pokéman stats
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
-      </div> 
-      <div id="skills-page-content">
-        <div class="skills-label"><b> Skills </b></div>
-        <div class="skills-description">
-          Technologies I'm familiar with and currently learning:
+
+        <div class="category-title">UI/UX</div>
+        <div class="category">
+          <a href="https://medium.com/@smngo100/ui-ux-case-study-costco-mobile-website-redesign-3436f16967c8"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/costco_redesign.webp"
+                   alt="Costco mobile website redesign"
+                   class="project-cover costco"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Costco mobile Website Redesign</div>
+                <div class="project-description">
+                  Redesigned the user interface and user experience to streamline
+                  navigation and simplify the interface to reduce user friction
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">Case Study</div>
+                <div class="language-tag">User Research</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://medium.com/@smngo100/ui-ux-case-study-mobile-app-sip-blend-b6eff5b30962"
+             target="_blank"
+             class="card-link"
+          >
+            <div class="card">
+              <img src="project_covers/sip_n_blend.webp"
+                   alt="Mobile app Sip & Blend"
+                   class="project-cover"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Mobile App: "Sip & Blend" </div>
+                <div class="project-description">
+                  Designed an intuitive platform enabling users to discover,
+                  organize, and prepare diverse juice and smoothie recipes from
+                  concept to completion
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">Case Study</div>
+                <div class="language-tag">Wireframes</div>
+                <div class="language-tag">User Research</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="" target="_blank" class="card-link">
+            <div class="card">
+              <img src="project_covers/chip.svg"
+                   alt="Mobile app Chip"
+                   class="project-cover chip"
+                   loading="lazy"
+                   decoding="async"
+              >
+              <div class="project-info">
+                <div class="project-title">Mobile App: "Chip"</div>
+                <div class="project-description">
+                  Designed and refined the user interface and experience for
+                  a mobile app that helps users split bills and track
+                  payment history
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">React Native</div>
+                <div class="language-tag">Live App Demo</div>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="skills-grid">
-          <div class="skills-card"> 
-            <img class="programming-language-icon" src="skill_icons/python.svg">
-            Python 
-          </div>
-          <div class="skills-card"> 
-            <img class="programming-language-icon" src="skill_icons/java.svg">
-            Java 
-          </div>
-          <div class="skills-card"> 
-            <img class="programming-language-icon" src="skill_icons/c++.svg">
-            C++ 
-          </div>
-          <div class="skills-card"> 
-            <img class="programming-language-icon" src="skill_icons/html5.svg">
-            HTML5 
-          </div>
-          <div class="skills-card"> 
-            <img class="programming-language-icon" src="skill_icons/css3.svg">
-            CSS3 
-          </div>
-        </div>
-      </div>          
-    </div>
-  </body> 
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-media-container">
+        <a
+          href="https://github.com/smngo100"
+          target="_blank"
+          class="social-media-icon"
+        >
+          <img src="social_media_icons/github-original.svg" alt="GitHub icon">
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sophia-ngo-166a91358"
+          target="_blank"
+          class="social-media-icon"
+        >
+          <img src="social_media_icons/linkedin-plain.svg" alt="LinkedIn icon">
+        </a>
+      </div>
+      <div class="copyright">@ 2025 Sophia N. All Rights Reserved</div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -52,7 +52,7 @@ export const resourceTypeLabels = {
   learning: 'Learning Platforms',   // Tutorials, courses, documentation
   tools: 'Tools & Frameworks',      // Libraries, frameworks, dev tools
   books: 'Books & Guides',          // Written resources, reference materials
-  practice: 'Practice & Projects'   // Challenges, projects ideas, exercises
+  practice: 'Practice & Projects'   // Challenges, _projects ideas, exercises
 }
 
 export const languageResources = {

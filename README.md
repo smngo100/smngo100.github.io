@@ -1,1 +1,0 @@
-# smngo100.github.io

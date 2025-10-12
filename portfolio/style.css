@@ -220,6 +220,10 @@ h1 {
     margin-bottom: 15%;
 }
 
+.category.uiux-category {
+    margin-bottom: -2%;
+}
+
 .category-title {
     font-family: 'Averia Serif Libre', serif;
     font-size: 3.125rem;

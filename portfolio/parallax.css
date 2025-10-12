@@ -1,0 +1,41 @@
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax img {
+    image-rendering: pixelated;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.parallax .greeting {
+    font-family: 'Inria Serif', serif;
+    position: absolute;
+    color: var(--greeting-text-color);
+}
+
+.greeting {
+    position: absolute;
+    left: 50%;
+    top: 115px;
+    transform: translate(-50%, -105px);
+}
+
+.parallax .first-line {
+    font-size: 2.5rem;
+}
+
+.parallax .second-line {
+    font-size: 14.375rem;
+    line-height: 0.8;
+}

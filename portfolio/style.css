@@ -126,7 +126,15 @@ section:not(#home) {
     position: relative;
     color: var(--light-text-color);
     margin: 10%;
-    scroll-margin-top: 10vh;
+}
+
+#journey {
+    scroll-margin-top: 14vh;
+}
+
+#skills,
+#projects{
+    scroll-margin-top: 8vh;
 }
 
 h1 {

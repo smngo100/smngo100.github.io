@@ -5,9 +5,9 @@
         max-width: 1280px;
     }
 
-    .uiux-category .project-info {
-        min-height: 180px;
-    }
+    /*.uiux-category .project-info {*/
+    /*    min-height: 180px;*/
+    /*}*/
 }
 
 /* xl */
@@ -21,6 +21,21 @@
 @media (max-width: 1024px) {
     .container {
         max-width: 100%;
+    }
+
+    .greeting {
+        position: absolute;
+        left: 38%;
+        top: 115px;
+        transform: translate(-50%, -105px);
+    }
+
+    .parallax .first-line {
+        font-size: 1.875rem;
+    }
+
+    .parallax .second-line {
+        font-size: 10.625rem;
     }
 
     nav {
@@ -87,6 +102,24 @@
 
     #home {
         height: 70vh;
+    }
+
+    /* Disable parallax on mobile */
+    .parallax img {
+        position: static !important;
+        transform: none !important;
+    }
+
+    #layer1, #clouds, #foreground_trees, #background_trees {
+        position: absolute !important;
+        transform: translateZ(0) !important;
+    }
+
+    .greeting {
+        position: absolute;
+        left: 40%;
+        top: 95px;
+        transform: translate(-50%, -105px);
     }
 
     .parallax .first-line {
@@ -173,6 +206,32 @@
         margin: 8%;
     }
 
+    /* Disable parallax on mobile */
+    .parallax img {
+        position: static !important;
+        transform: none !important;
+    }
+
+    #layer1, #clouds, #foreground_trees, #background_trees {
+        position: absolute !important;
+        transform: translateZ(0) !important;
+    }
+
+    .greeting {
+        position: absolute;
+        left: 45%;
+        top: 95px;
+        transform: translate(-50%, -105px);
+    }
+
+    .parallax .second-line {
+        font-size: 5.625rem;
+    }
+
+    .parallax .first-line {
+        font-size: 1.25rem;
+    }
+
     nav {
         font-size: 1rem;
         max-width: 90%;
@@ -218,6 +277,24 @@
 
     #home {
         height: 60vh;
+    }
+
+    /* Disable parallax on mobile */
+    .parallax img {
+        position: static !important;
+        transform: none !important;
+    }
+
+    #layer1, #clouds, #foreground_trees, #background_trees {
+        position: absolute !important;
+        transform: translateZ(0) !important;
+    }
+
+    .greeting {
+        position: absolute;
+        left: 38%;
+        top: 90px;
+        transform: translate(-50%, -105px);
     }
 
     .parallax .second-line {
@@ -268,7 +345,7 @@
     }
 
     .card {
-        min-height: 450px;
+        min-height: 440px;
     }
 
     .project-cover {

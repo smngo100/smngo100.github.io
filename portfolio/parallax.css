@@ -1,3 +1,28 @@
+/* Ensure layers are positioned absolutely and align to top-left of #home */
+/*#home img {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    max-width: none; !* avoid browser scaling differences *!*/
+/*    height: auto;*/
+/*    will-change: transform;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*!* Ensure greeting/text stays visually centered via CSS base transform;*/
+/*   JS will append parallax offset to this base transform (see JS) *!*/
+/*#greeting, #text, .greeting {*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 115px; !* keep this consistent with your media queries *!*/
+/*    transform: translate(-50%, -105%);*/
+/*    will-change: transform;*/
+/*    pointer-events: none;*/
+/*}*/
+
+
 .parallax {
     position: relative;
     display: flex;

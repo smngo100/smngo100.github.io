@@ -1,13 +1,8 @@
-
 /* 2xl */
 @media (max-width: 1536px) {
     .container {
         max-width: 1280px;
     }
-
-    /*.uiux-category .project-info {*/
-    /*    min-height: 180px;*/
-    /*}*/
 }
 
 /* xl */
@@ -23,11 +18,9 @@
         max-width: 100%;
     }
 
-    .greeting {
-        position: absolute;
+    .parallax .greeting {
         left: 38%;
         top: 115px;
-        transform: translate(-50%, -105px);
     }
 
     .parallax .first-line {
@@ -104,22 +97,29 @@
         height: 70vh;
     }
 
-    /* Disable parallax on mobile */
-    .parallax img {
-        position: static !important;
-        transform: none !important;
-    }
+    /*!* Disable parallax on mobile *!*/
+    /*.parallax img {*/
+    /*    position: static !important;*/
+    /*    transform: none !important;*/
+    /*}*/
 
-    #layer1, #clouds, #foreground_trees, #background_trees {
+    /*#layer1, #clouds, #foreground_trees, #background_trees {*/
+    /*    position: absolute !important;*/
+    /*    transform: translateZ(0) !important;*/
+    /*}*/
+
+    .parallax img,
+    #foreground_trees_clone,
+    #background_trees_clone {
         position: absolute !important;
-        transform: translateZ(0) !important;
+        top: 0 !important;
+        left: 0 !important;
+        object-fit: cover;
     }
 
-    .greeting {
-        position: absolute;
+    .parallax .greeting {
         left: 40%;
         top: 95px;
-        transform: translate(-50%, -105px);
     }
 
     .parallax .first-line {
@@ -206,22 +206,33 @@
         margin: 8%;
     }
 
-    /* Disable parallax on mobile */
-    .parallax img {
-        position: static !important;
-        transform: none !important;
-    }
+    /*!* Disable parallax on mobile *!*/
+    /*.parallax img {*/
+    /*    position: static !important;*/
+    /*    transform: none !important;*/
+    /*}*/
 
-    #layer1, #clouds, #foreground_trees, #background_trees {
+    /*#layer1, #clouds, #foreground_trees, #background_trees {*/
+    /*    position: absolute !important;*/
+    /*    transform: translateZ(0) !important;*/
+    /*}*/
+
+    .parallax img,
+    #foreground_trees_clone,
+    #background_trees_clone {
         position: absolute !important;
-        transform: translateZ(0) !important;
+        top: 0 !important;
+        left: 0 !important;
+        object-fit: cover;
+
+        width: 100% !important;
+        height: 100% !important;
+        object-position: center center; /* Ensure consistent cropping */
     }
 
-    .greeting {
-        position: absolute;
+    .parallax .greeting {
         left: 45%;
         top: 95px;
-        transform: translate(-50%, -105px);
     }
 
     .parallax .second-line {
@@ -279,22 +290,29 @@
         height: 60vh;
     }
 
-    /* Disable parallax on mobile */
-    .parallax img {
-        position: static !important;
-        transform: none !important;
-    }
-
-    #layer1, #clouds, #foreground_trees, #background_trees {
+    .parallax img,
+    #foreground_trees_clone,
+    #background_trees_clone {
         position: absolute !important;
-        transform: translateZ(0) !important;
+        transform: none !important;
+        object-fit: cover;
+        object-position: center bottom;
     }
 
-    .greeting {
-        position: absolute;
+    /*!* Disable parallax on mobile *!*/
+    /*.parallax img {*/
+    /*    position: static !important;*/
+    /*    transform: none !important;*/
+    /*}*/
+
+    /*#layer1, #clouds, #foreground_trees, #background_trees {*/
+    /*    position: absolute !important;*/
+    /*    transform: translateZ(0) !important;*/
+    /*}*/
+
+    .parallax .greeting {
         left: 38%;
         top: 90px;
-        transform: translate(-50%, -105px);
     }
 
     .parallax .second-line {

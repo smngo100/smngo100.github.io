@@ -74,9 +74,9 @@
             return;
         }
 
-        if (isMobile || isSmallScreen()) {
-            adjustForSmallScreen();
-        }
+        // if (isMobile || isSmallScreen()) {
+        //     adjustForSmallScreen();
+        // }
 
         createClones();
         measureWidths();
@@ -115,10 +115,10 @@
 
     /** Clone parallax layers for seamless wrap **/
     function createClones() {
-        // Skip cloning on very small screens for performance
-        if (window.innerWidth <= 475) {
-            return;
-        }
+        // // Skip cloning on very small screens for performance
+        // if (window.innerWidth <= 475) {
+        //     return;
+        // }
 
         if (!$('#foreground_trees_clone')) {
             fgClone = fgEl.cloneNode(true);
@@ -170,6 +170,49 @@
         }
     }
 
+    // /** Parallax update logic **/
+    // function updateParallax(firstPaint = false) {
+    //     if (!parallaxEnabled) return;
+    //
+    //     const scrollY = window.scrollY || 0;
+    //
+    //     if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
+    //
+    //     textEl.style.transform = `translate3d(0, ${scrollY * parallaxMultipliers.text}px, 0)`;
+    //     // textEl.style.transform = `translate(-50%, ${scrollY * parallaxMultipliers.text}px)`;
+    //     cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
+    //
+    //     // Always animate trees if clones exist
+    //     if (fgClone && bgClone) {
+    //         const fgOffset = scrollY * parallaxMultipliers.foreground;
+    //         const fgMod = modWrap(fgOffset, fgWidth);
+    //         fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
+    //         fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
+    //
+    //         const bgOffset = scrollY * parallaxMultipliers.background;
+    //         const bgMod = modWrap(bgOffset, bgWidth);
+    //         bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
+    //         bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
+    //     }
+    //
+    //     // Only animate trees if not on very small screens
+    //     if (window.innerWidth > 475 && fgClone && bgClone) {
+    //         const fgOffset = scrollY * parallaxMultipliers.foreground;
+    //         const fgMod = modWrap(fgOffset, fgWidth);
+    //         fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
+    //         fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
+    //
+    //         const bgOffset = scrollY * parallaxMultipliers.background;
+    //         const bgMod = modWrap(bgOffset, bgWidth);
+    //         bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
+    //         bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
+    //     } else {
+    //         // Keep trees static on very small screens
+    //         fgEl.style.transform = 'translate3d(0, 0, 0)';
+    //         bgEl.style.transform = 'translate3d(0, 0, 0)';
+    //     }
+    // }
+
     /** Parallax update logic **/
     function updateParallax(firstPaint = false) {
         if (!parallaxEnabled) return;
@@ -178,11 +221,13 @@
 
         if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
 
+        // USE THIS ONE (keeps text centered horizontally)
         textEl.style.transform = `translate3d(0, ${scrollY * parallaxMultipliers.text}px, 0)`;
+        // textEl.style.transform = `translate(-50%, ${scrollY * parallaxMultipliers.text}px)`;
         cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
 
-        // Only animate trees if not on very small screens
-        if (window.innerWidth > 475 && fgClone && bgClone) {
+        // Always animate trees if clones exist
+        if (fgClone && bgClone) {
             const fgOffset = scrollY * parallaxMultipliers.foreground;
             const fgMod = modWrap(fgOffset, fgWidth);
             fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
@@ -192,10 +237,6 @@
             const bgMod = modWrap(bgOffset, bgWidth);
             bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
             bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
-        } else {
-            // Keep trees static on very small screens
-            fgEl.style.transform = 'translate3d(0, 0, 0)';
-            bgEl.style.transform = 'translate3d(0, 0, 0)';
         }
     }
 

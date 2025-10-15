@@ -32,7 +32,9 @@
     overflow: hidden;
 }
 
-.parallax img {
+.parallax img,
+#foreground_trees_clone,
+#background_trees_clone {
     image-rendering: pixelated;
     position: absolute;
     top: 0;
@@ -45,15 +47,12 @@
 
 .parallax .greeting {
     font-family: 'Inria Serif', serif;
-    position: absolute;
     color: var(--greeting-text-color);
-}
-
-.greeting {
+    transform: translate(-50%, -105px);
+    pointer-events: none;
     position: absolute;
     left: 50%;
     top: 115px;
-    transform: translate(-50%, -105px);
 }
 
 .parallax .first-line {

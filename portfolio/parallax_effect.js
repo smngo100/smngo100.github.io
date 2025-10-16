@@ -11,7 +11,9 @@
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
             navigator.userAgent,
         );
-    const isSmallScreen = () => window.innerWidth <= 768;
+
+    /** Check if screen should have parallax disabled **/
+    const shouldDisableParallax = () => window.innerWidth <= 1024;
 
     /** Wait for images to load before initializing **/
     function waitForImages(images) {
@@ -55,8 +57,8 @@
     let ticking = false;
     let parallaxEnabled = true;
 
-    // Adjust parallax intensity based on screen size
-    let parallaxMultipliers = {
+    // Parallax intensity for large screens (> 1024px)
+    const parallaxMultipliers = {
         text: 1.5,
         clouds: 0.35,
         foreground: 1,
@@ -68,58 +70,57 @@
         const imgs = parallaxRoot.querySelectorAll('img');
         await waitForImages(imgs);
 
-        // Disable or reduce parallax on mobile/small screens or if user prefers reduced motion
+        // Disable parallax if user prefers reduced motion
         if (prefersReducedMotion) {
             disableParallax();
             return;
         }
 
-        // if (isMobile || isSmallScreen()) {
-        //     adjustForSmallScreen();
-        // }
-
-        createClones();
-        measureWidths();
-        updateParallax(true);
+        // Check if parallax should be enabled based on screen size
+        if (shouldDisableParallax()) {
+            disableParallax();
+        } else {
+            enableParallax();
+        }
 
         window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', onResize, { passive: true });
         document.addEventListener('visibilitychange', onVisibilityChange);
     }
 
-    /** Disable parallax completely **/
+    /** Disable parallax completely (for screens <= 1024px) **/
     function disableParallax() {
         parallaxEnabled = false;
-        textEl.style.transform = 'translate(50%, -105%)';
+
+        // Position text with horizontal offset for smaller screens
+        textEl.style.transform = 'translate3d(-17%, 0, 0)';
+
+        // Keep other elements static
         cloudsEl.style.transform = 'none';
         fgEl.style.transform = 'none';
         bgEl.style.transform = 'none';
+
+        // Remove clones if they exist
+        if (fgClone && fgClone.parentNode) {
+            fgClone.remove();
+            fgClone = null;
+        }
+        if (bgClone && bgClone.parentNode) {
+            bgClone.remove();
+            bgClone = null;
+        }
     }
 
-    /** Adjust parallax intensity for small screens **/
-    function adjustForSmallScreen() {
-        // Reduce parallax intensity by 50% on small screens
-        parallaxMultipliers = {
-            text: 0.75, // Reduced from 1.5
-            clouds: 0.2, // Reduced from 0.35
-            foreground: 0.5, // Reduced from 1
-            background: 1.25, // Reduced from 2.5
-        };
-
-        // On very small screens, disable cloning for better performance
-        if (window.innerWidth <= 475) {
-            parallaxMultipliers.foreground = 0;
-            parallaxMultipliers.background = 0;
-        }
+    /** Enable parallax (for screens > 1024px) **/
+    function enableParallax() {
+        parallaxEnabled = true;
+        createClones();
+        measureWidths();
+        updateParallax(true);
     }
 
     /** Clone parallax layers for seamless wrap **/
     function createClones() {
-        // // Skip cloning on very small screens for performance
-        // if (window.innerWidth <= 475) {
-        //     return;
-        // }
-
         if (!$('#foreground_trees_clone')) {
             fgClone = fgEl.cloneNode(true);
             fgClone.id = 'foreground_trees_clone';
@@ -156,77 +157,36 @@
 
     /** Scroll handler using RAF **/
     function onScroll() {
-        if (!parallaxEnabled) return;
-
-        // Throttle more aggressively on mobile
-        const shouldThrottle = isMobile || isSmallScreen();
-
-        if (!ticking || !shouldThrottle) {
+        if (!ticking) {
             requestAnimationFrame(() => {
-                updateParallax();
+                if (parallaxEnabled) {
+                    updateParallax();
+                } else {
+                    updateTextOnly();
+                }
                 ticking = false;
             });
             ticking = true;
         }
     }
 
-    // /** Parallax update logic **/
-    // function updateParallax(firstPaint = false) {
-    //     if (!parallaxEnabled) return;
-    //
-    //     const scrollY = window.scrollY || 0;
-    //
-    //     if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
-    //
-    //     textEl.style.transform = `translate3d(0, ${scrollY * parallaxMultipliers.text}px, 0)`;
-    //     // textEl.style.transform = `translate(-50%, ${scrollY * parallaxMultipliers.text}px)`;
-    //     cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
-    //
-    //     // Always animate trees if clones exist
-    //     if (fgClone && bgClone) {
-    //         const fgOffset = scrollY * parallaxMultipliers.foreground;
-    //         const fgMod = modWrap(fgOffset, fgWidth);
-    //         fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
-    //         fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
-    //
-    //         const bgOffset = scrollY * parallaxMultipliers.background;
-    //         const bgMod = modWrap(bgOffset, bgWidth);
-    //         bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
-    //         bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
-    //     }
-    //
-    //     // Only animate trees if not on very small screens
-    //     if (window.innerWidth > 475 && fgClone && bgClone) {
-    //         const fgOffset = scrollY * parallaxMultipliers.foreground;
-    //         const fgMod = modWrap(fgOffset, fgWidth);
-    //         fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
-    //         fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
-    //
-    //         const bgOffset = scrollY * parallaxMultipliers.background;
-    //         const bgMod = modWrap(bgOffset, bgWidth);
-    //         bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
-    //         bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
-    //     } else {
-    //         // Keep trees static on very small screens
-    //         fgEl.style.transform = 'translate3d(0, 0, 0)';
-    //         bgEl.style.transform = 'translate3d(0, 0, 0)';
-    //     }
-    // }
+    /** Update only text position for smaller screens **/
+    function updateTextOnly() {
+        const scrollY = window.scrollY || 0;
+        textEl.style.transform = `translate3d(-30%, ${scrollY * parallaxMultipliers.text}px, 0)`;
+    }
 
-    /** Parallax update logic **/
+    /** Parallax update logic for large screens **/
     function updateParallax(firstPaint = false) {
-        if (!parallaxEnabled) return;
-
         const scrollY = window.scrollY || 0;
 
         if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
 
-        // USE THIS ONE (keeps text centered horizontally)
+        // Center text horizontally on large screens
         textEl.style.transform = `translate3d(0, ${scrollY * parallaxMultipliers.text}px, 0)`;
-        // textEl.style.transform = `translate(-50%, ${scrollY * parallaxMultipliers.text}px)`;
         cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
 
-        // Always animate trees if clones exist
+        // Animate trees with clones
         if (fgClone && bgClone) {
             const fgOffset = scrollY * parallaxMultipliers.foreground;
             const fgMod = modWrap(fgOffset, fgWidth);
@@ -252,21 +212,17 @@
     function onResize() {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            // Re-check if we need to adjust for small screen
-            if (isSmallScreen()) {
-                adjustForSmallScreen();
+            if (shouldDisableParallax()) {
+                if (parallaxEnabled) {
+                    disableParallax();
+                }
             } else {
-                // Reset to full parallax
-                parallaxMultipliers = {
-                    text: 1.5,
-                    clouds: 0.35,
-                    foreground: 1,
-                    background: 2.5,
-                };
+                if (!parallaxEnabled) {
+                    enableParallax();
+                }
+                measureWidths();
+                updateParallax(true);
             }
-
-            measureWidths();
-            updateParallax(true);
         }, 100);
     }
 

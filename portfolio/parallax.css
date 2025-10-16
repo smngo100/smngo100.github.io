@@ -48,7 +48,6 @@
 .parallax .greeting {
     font-family: 'Inria Serif', serif;
     color: var(--greeting-text-color);
-    transform: translate(-50%, -105px);
     pointer-events: none;
     position: absolute;
     left: 50%;
@@ -56,10 +55,10 @@
 }
 
 .parallax .first-line {
-    font-size: 2.5rem;
+    font-size: 2.55rem;
 }
 
 .parallax .second-line {
-    font-size: 14.375rem;
+    font-size: 15rem;
     line-height: 0.8;
 }

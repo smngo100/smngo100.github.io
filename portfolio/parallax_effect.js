@@ -88,30 +88,6 @@
         document.addEventListener('visibilitychange', onVisibilityChange);
     }
 
-    // /** Disable parallax completely (for screens <= 1024px) **/
-    // function disableParallax() {
-    //     parallaxEnabled = false;
-    //
-    //     // Position text with horizontal offset for smaller screens
-    //     textEl.style.transform = 'translate3d(-17%, 0, 0)';
-    //
-    //     // Keep other elements static
-    //     cloudsEl.style.transform = 'none';
-    //     fgEl.style.transform = 'none';
-    //     bgEl.style.transform = 'none';
-    //
-    //     // Remove clones if they exist
-    //     if (fgClone && fgClone.parentNode) {
-    //         fgClone.remove();
-    //         fgClone = null;
-    //     }
-    //     if (bgClone && bgClone.parentNode) {
-    //         bgClone.remove();
-    //         bgClone = null;
-    //     }
-    // }
-
-
     /** Disable parallax completely (for screens <= 1024px) **/
     function disableParallax() {
         parallaxEnabled = false;
@@ -181,44 +157,38 @@
     function onScroll() {
         if (!ticking) {
             requestAnimationFrame(() => {
-                if (parallaxEnabled) {
-                    updateParallax();
-                } else {
-                    updateTextOnly();
-                }
+                updateParallax();
                 ticking = false;
             });
             ticking = true;
         }
     }
 
-    /** Update only text position for smaller screens **/
-    function updateTextOnly() {
-        const scrollY = window.scrollY || 0;
-        textEl.style.transform = `translate3d(-30%, ${scrollY * parallaxMultipliers.text}px, 0)`;
-    }
-
-    /** Parallax update logic for large screens **/
+    /** Parallax update logic **/
     function updateParallax(firstPaint = false) {
         const scrollY = window.scrollY || 0;
 
-        if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
-
-        // Center text horizontally on large screens
+        // Always animate text on all screen sizes
         textEl.style.transform = `translate3d(0, ${scrollY * parallaxMultipliers.text}px, 0)`;
-        cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
 
-        // Animate trees with clones
-        if (fgClone && bgClone) {
-            const fgOffset = scrollY * parallaxMultipliers.foreground;
-            const fgMod = modWrap(fgOffset, fgWidth);
-            fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
-            fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
+        // Only animate layers on large screens (> 1024px)
+        if (parallaxEnabled) {
+            if ((fgWidth === 0 || bgWidth === 0) && !firstPaint) measureWidths();
 
-            const bgOffset = scrollY * parallaxMultipliers.background;
-            const bgMod = modWrap(bgOffset, bgWidth);
-            bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
-            bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
+            cloudsEl.style.transform = `translate3d(${scrollY * parallaxMultipliers.clouds}px, 0, 0)`;
+
+            // Animate trees with clones
+            if (fgClone && bgClone) {
+                const fgOffset = scrollY * parallaxMultipliers.foreground;
+                const fgMod = modWrap(fgOffset, fgWidth);
+                fgEl.style.transform = `translate3d(${fgMod}px, 0, 0)`;
+                fgClone.style.transform = `translate3d(${fgMod - fgWidth}px, 0, 0)`;
+
+                const bgOffset = scrollY * parallaxMultipliers.background;
+                const bgMod = modWrap(bgOffset, bgWidth);
+                bgEl.style.transform = `translate3d(${bgMod}px, 0, 0)`;
+                bgClone.style.transform = `translate3d(${bgMod - bgWidth}px, 0, 0)`;
+            }
         }
     }
 

@@ -46,7 +46,7 @@
     }
 
     .parallax .greeting {
-        left: 55%;
+        left: 38%;
         top: 140px;
     }
 
@@ -134,7 +134,7 @@
     /*}*/
 
     .parallax .greeting {
-        left: 55%;
+        left: 38%;
         top: 105px;
     }
 
@@ -235,7 +235,7 @@
     /*}*/
 
     .parallax .greeting {
-        left: 55%;
+        left: 36%;
         top: 115px;
     }
 
@@ -302,11 +302,6 @@
     /*    object-fit: cover;*/
     /*    object-position: center bottom;*/
     /*}*/
-
-    .parallax .greeting {
-        left: -10%;
-        top: 115px;
-    }
 
     .parallax .first-line {
         font-size: 1.25rem;

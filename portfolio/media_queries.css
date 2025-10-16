@@ -124,14 +124,14 @@
         height: 70vh;
     }
 
-    .parallax img,
-    #foreground_trees_clone,
-    #background_trees_clone {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        object-fit: cover;
-    }
+    /*.parallax img,*/
+    /*#foreground_trees_clone,*/
+    /*#background_trees_clone {*/
+    /*    position: absolute !important;*/
+    /*    top: 0 !important;*/
+    /*    left: 0 !important;*/
+    /*    object-fit: cover;*/
+    /*}*/
 
     .parallax .greeting {
         left: 55%;
@@ -222,17 +222,17 @@
         margin: 8%;
     }
 
-    .parallax img,
-    #foreground_trees_clone,
-    #background_trees_clone {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        object-fit: cover;
-        width: 100% !important;
-        height: 100% !important;
-        object-position: center center;
-    }
+    /*.parallax img,*/
+    /*#foreground_trees_clone,*/
+    /*#background_trees_clone {*/
+    /*    position: absolute !important;*/
+    /*    top: 0 !important;*/
+    /*    left: 0 !important;*/
+    /*    object-fit: cover;*/
+    /*    width: 100% !important;*/
+    /*    height: 100% !important;*/
+    /*    object-position: center center;*/
+    /*}*/
 
     .parallax .greeting {
         left: 55%;
@@ -294,13 +294,18 @@
         height: 60vh;
     }
 
-    .parallax img,
-    #foreground_trees_clone,
-    #background_trees_clone {
-        position: absolute !important;
-        transform: none !important;
-        object-fit: cover;
-        object-position: center bottom;
+    /*.parallax img,*/
+    /*#foreground_trees_clone,*/
+    /*#background_trees_clone {*/
+    /*    position: absolute !important;*/
+    /*    transform: none !important;*/
+    /*    object-fit: cover;*/
+    /*    object-position: center bottom;*/
+    /*}*/
+
+    .parallax .greeting {
+        left: -10%;
+        top: 115px;
     }
 
     .parallax .first-line {

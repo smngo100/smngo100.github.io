@@ -88,17 +88,39 @@
         document.addEventListener('visibilitychange', onVisibilityChange);
     }
 
+    // /** Disable parallax completely (for screens <= 1024px) **/
+    // function disableParallax() {
+    //     parallaxEnabled = false;
+    //
+    //     // Position text with horizontal offset for smaller screens
+    //     textEl.style.transform = 'translate3d(-17%, 0, 0)';
+    //
+    //     // Keep other elements static
+    //     cloudsEl.style.transform = 'none';
+    //     fgEl.style.transform = 'none';
+    //     bgEl.style.transform = 'none';
+    //
+    //     // Remove clones if they exist
+    //     if (fgClone && fgClone.parentNode) {
+    //         fgClone.remove();
+    //         fgClone = null;
+    //     }
+    //     if (bgClone && bgClone.parentNode) {
+    //         bgClone.remove();
+    //         bgClone = null;
+    //     }
+    // }
+
+
     /** Disable parallax completely (for screens <= 1024px) **/
     function disableParallax() {
         parallaxEnabled = false;
 
-        // Position text with horizontal offset for smaller screens
-        textEl.style.transform = 'translate3d(-17%, 0, 0)';
-
-        // Keep other elements static
-        cloudsEl.style.transform = 'none';
-        fgEl.style.transform = 'none';
-        bgEl.style.transform = 'none';
+        // Remove inline transforms to let CSS media queries control positioning
+        textEl.style.transform = '';
+        cloudsEl.style.transform = '';
+        fgEl.style.transform = '';
+        bgEl.style.transform = '';
 
         // Remove clones if they exist
         if (fgClone && fgClone.parentNode) {

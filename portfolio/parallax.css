@@ -1,4 +1,4 @@
-/* Ensure layers are positioned absolutely and align to top-left of #home*/
+/*!* Ensure layers are positioned absolutely and align to top-left of #home*!*/
 /*#home img {*/
 /*    position: absolute;*/
 /*    left: 0;*/
@@ -6,9 +6,10 @@
 /*    display: block;*/
 /*    width: 100%;*/
 /*    max-width: none; !* avoid browser scaling differences *!*/
-/*    height: auto;*/
+/*    height: 100vh;*/
 /*    will-change: transform;*/
 /*    pointer-events: none;*/
+/*    object-fit: cover;*/
 /*}*/
 
 /*!* Ensure greeting/text stays visually centered via CSS base transform;*/

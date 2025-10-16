@@ -13,7 +13,8 @@
         );
 
     /** Check if screen should have parallax disabled **/
-    const shouldDisableParallax = () => window.innerWidth <= 1024;
+    // const shouldDisableParallax = () => window.innerWidth <= 1024;
+    const shouldDisableParallax = () => window.innerWidth <= 1536;
 
     /** Wait for images to load before initializing **/
     function waitForImages(images) {

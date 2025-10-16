@@ -1,4 +1,4 @@
-/*!* Ensure layers are positioned absolutely and align to top-left of #home*!*/
+/*!*!* Ensure layers are positioned absolutely and align to top-left of #home*!*!*/
 /*#home img {*/
 /*    position: absolute;*/
 /*    left: 0;*/
@@ -6,9 +6,14 @@
 /*    display: block;*/
 /*    width: 100%;*/
 /*    max-width: none; !* avoid browser scaling differences *!*/
-/*    height: 100vh;*/
+/*    height: 110%;*/
 /*    will-change: transform;*/
 /*    pointer-events: none;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*#layer1 {*/
+/*    height: 100%;*/
 /*    object-fit: cover;*/
 /*}*/
 

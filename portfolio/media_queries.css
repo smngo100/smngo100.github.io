@@ -303,12 +303,17 @@
     /*    object-position: center bottom;*/
     /*}*/
 
+    .parallax .greeting {
+        left: 50%;
+        top: 100px;
+    }
+
     .parallax .first-line {
         font-size: 1.25rem;
     }
 
     .parallax .second-line {
-        font-size: 3rem;
+        font-size: 3.75rem;
     }
 
     nav {

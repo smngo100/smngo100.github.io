@@ -162,14 +162,15 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5%;
 }
 
 .chapter-title {
     font-family: 'Averia Serif Libre', serif;
     font-size: 3.125rem;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 8px;
+    /*text-decoration: underline;*/
+    /*text-decoration-thickness: 2px;*/
+    /*text-underline-offset: 8px;*/
 }
 
 .timeline {

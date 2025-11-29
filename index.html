@@ -1,171 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sophia's Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preload" as="image" href="portfolio/image_layers/1.png">
-    <link rel="preload" as="image" href="portfolio/image_layers/2.png">
-    <link rel="preload" as="image" href="portfolio/image_layers/3.png">
-    <link rel="preload" as="image" href="portfolio/image_layers/4.png">
+    <link rel="preload" as="image" href="portfolio/image_layers/1.png" />
+    <link rel="preload" as="image" href="portfolio/image_layers/2.png" />
+    <link rel="preload" as="image" href="portfolio/image_layers/3.png" />
+    <link rel="preload" as="image" href="portfolio/image_layers/4.png" />
 
-    <link rel="stylesheet" href="portfolio/styles/style.css">
-    <link rel="stylesheet" href="portfolio/styles/parallax.css">
-    <link rel="stylesheet" href="portfolio/styles/media_queries.css">
-</head>
-<body>
-<header>
-    <nav class="navbar">
+    <link rel="stylesheet" href="portfolio/styles/style.css" />
+    <link rel="stylesheet" href="portfolio/styles/parallax.css" />
+    <link rel="stylesheet" href="portfolio/styles/media_queries.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#journey">My Journey</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <section id="home" class="parallax">
-        <img src="portfolio/image_layers/1.png" id="layer1">
+    <main>
+      <section id="home" class="parallax">
+        <img src="portfolio/image_layers/1.png" id="layer1" />
         <div id="text" class="greeting">
-            <div class="first-line">Hello, I am</div>
-            <div class="second-line">SOPHIA</div>
+          <div class="first-line">Hello, I am</div>
+          <div class="second-line">SOPHIA</div>
         </div>
-        <img src="portfolio/image_layers/2.png" id="clouds">
-        <img src="portfolio/image_layers/3.png" id="foreground_trees">
-        <img src="portfolio/image_layers/4.png" id="background_trees">
-    </section>
+        <img src="portfolio/image_layers/2.png" id="clouds" />
+        <img src="portfolio/image_layers/3.png" id="foreground_trees" />
+        <img src="portfolio/image_layers/4.png" id="background_trees" />
+      </section>
 
-    <section id="journey" class="container">
+      <section id="journey" class="container">
         <div class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-title">Chapter 1: Web Development</div>
-                <div class="timeline">March 2025</div>
-            </div>
-            <div class="chapter-content">
-                I stumbled upon an HTML & CSS introduction video and spontaneously
-                started it. Despite having CS coursework to focus on, I was immediately
-                hooked. I created small projects along the way, beginning with an
-                extremely simple photo gallery, and eventually building up to a PokéDex.
-            </div>
-        </div>
-
-        <div class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-title">Chapter 2: UI/UX</div>
-                <div class="timeline">August 2025</div>
-            </div>
-            <div class="chapter-content">
-                While finishing a JavaScript tutorial video, I stumbled into the
-                world of user experience and user interface design. Within a month,
-                I had explored the fundamentals—design process, information
-                architecture, usability testing, prototyping, and many more concepts.
-                I applied what I learned through projects and case studies,
-                discovering how design thinking could transform my approach to
-                building digital experiences.
-            </div>
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 1: Web Development</div>
+            <div class="timeline">March 2025</div>
+          </div>
+          <div class="chapter-content">
+            I stumbled upon an HTML & CSS introduction video and spontaneously
+            started it. Despite having CS coursework to focus on, I was
+            immediately hooked. I created small projects along the way,
+            beginning with an extremely simple photo gallery, and eventually
+            building up to a PokéDex.
+          </div>
         </div>
 
         <div class="chapter">
-            <div class="chapter-header">
-                <div class="chapter-title">Chapter 3: The Journey Continues</div>
-                <div class="timeline">August 2025—Present</div>
-            </div>
-            <div class="chapter-content">
-                I am still focused on exploring more concepts in the fascinating
-                field of UI/UX. Currently streamlining my design workflow and
-                working as a UI/UX designer and Frontend developer on a small development team at my school.
-                We're working on a mobile application designed to simplify bill splitting among friends called
-                <a href="#chip" class="chip-link">Chip.</a>
-            </div>
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 2: UI/UX</div>
+            <div class="timeline">August 2025</div>
+          </div>
+          <div class="chapter-content">
+            While finishing a JavaScript tutorial video, I stumbled into the
+            world of user experience and user interface design. Within a month,
+            I had explored the fundamentals—design process, information
+            architecture, usability testing, prototyping, and many more
+            concepts. I applied what I learned through projects and case
+            studies, discovering how design thinking could transform my approach
+            to building digital experiences.
+          </div>
         </div>
-    </section>
 
-    <section id="skills" class="container">
+        <div class="chapter">
+          <div class="chapter-header">
+            <div class="chapter-title">Chapter 3: The Journey Continues</div>
+            <div class="timeline">August 2025—Present</div>
+          </div>
+          <div class="chapter-content">
+            I am still focused on exploring more concepts in the fascinating
+            field of UI/UX. Currently streamlining my design workflow and
+            working as a UI/UX designer and Frontend developer on a small
+            development team at my school. We're working on a mobile application
+            designed to simplify bill splitting among friends called
+            <a href="#chip" class="chip-link">Chip.</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="container">
         <div class="row-icons">
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/python-plain.svg"
-                     alt="Python programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/python.svg"
-                     alt="Python programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/python-plain.svg"
+              alt="Python programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/python.svg"
+              alt="Python programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/java-plain.svg"
-                     alt="Java programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/java.svg"
-                     alt="Java programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/java-plain.svg"
+              alt="Java programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/java.svg"
+              alt="Java programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/cplusplus-plain.svg"
-                     alt="C++ programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/cplusplus-original.svg"
-                     alt="C++ programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/cplusplus-plain.svg"
+              alt="C++ programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/cplusplus-original.svg"
+              alt="C++ programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/javascript-plain.svg"
-                     alt="JavaScript programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/javascript.svg"
-                     alt="JavaScript programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/javascript-plain.svg"
+              alt="JavaScript programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/javascript.svg"
+              alt="JavaScript programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
         </div>
 
         <div class="row-icons">
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/html5-plain.svg"
-                     alt="HTML5 programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/html5-original.svg"
-                     alt="HTML5 programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/html5-plain.svg"
+              alt="HTML5 programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/html5-original.svg"
+              alt="HTML5 programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/css3-plain.svg"
-                     alt="CSS3 programming icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/css3-original.svg"
-                     alt="CSS3 programming icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/css3-plain.svg"
+              alt="CSS3 programming icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/css3-original.svg"
+              alt="CSS3 programming icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/figma-plain.svg"
-                     alt="Figma design icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/figma-original.svg"
-                     alt="Figma design icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/figma-plain.svg"
+              alt="Figma design icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/figma-original.svg"
+              alt="Figma design icon"
+              class="skill-icon icon-original"
+            />
+          </div>
 
-            <div class="icon-container">
-                <img src="portfolio/skill_icons/plain/photoshop-plain.svg"
-                     alt="Photoshop icon"
-                     class="skill-icon icon-plain">
-                <img src="portfolio/skill_icons/original/photoshop-original.svg"
-                     alt="Photoshop icon"
-                     class="skill-icon icon-original">
-            </div>
+          <div class="icon-container">
+            <img
+              src="portfolio/skill_icons/plain/photoshop-plain.svg"
+              alt="Photoshop icon"
+              class="skill-icon icon-plain"
+            />
+            <img
+              src="portfolio/skill_icons/original/photoshop-original.svg"
+              alt="Photoshop icon"
+              class="skill-icon icon-original"
+            />
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="projects" class="container">
+      <section id="projects" class="container">
         <div class="category-title">Frontend</div>
         <div class="category">
-            <a href="https://smngo100.github.io/projects/photo-gallery"
+          <!-- <a href="https://smngo100.github.io/projects/photo-gallery"
                target="_blank"
                class="card-link"
             >
@@ -188,217 +222,265 @@
                         <div class="language-tag">CSS</div>
                     </div>
                 </div>
-            </a>
+            </a> -->
 
-            <a href="https://smngo100.github.io/projects/todo-list/"
-               target="_blank"
-               class="card-link"
-            >
-                <div class="card">
-                    <img src="portfolio/project_covers/todo_list.png"
-                         alt="Todo list project"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">Todo List</div>
-                        <div class="project-description">
-                            Dynamic to-do list web application
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">HTML</div>
-                        <div class="language-tag">CSS</div>
-                        <div class="language-tag">JavaScript</div>
-                    </div>
+          <a
+            href="https://smngo100.github.io/projects/todo-list/"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/todo_list.png"
+                alt="Todo list project"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">Todo List</div>
+                <div class="project-description">
+                  Dynamic to-do list web application
                 </div>
-            </a>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
+            </div>
+          </a>
 
-            <a href="https://smngo100.github.io/projects/iphone-evolution/"
-               target="_blank"
-               class="card-link"
-            >
-                <div class="card">
-                    <img src="portfolio/project_covers/iphone_evolution.png"
-                         alt="iPhone Evolution project"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">iPhone Evolution</div>
-                        <div class="project-description">
-                            Documented the evolution of iPhone models
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">HTML</div>
-                        <div class="language-tag">CSS</div>
-                        <div class="language-tag">JavaScript</div>
-                    </div>
+          <a
+            href="https://smngo100.github.io/projects/iphone-evolution/"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/iphone_evolution.png"
+                alt="iPhone Evolution project"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">iPhone Evolution</div>
+                <div class="project-description">
+                  Documented the evolution of iPhone models
                 </div>
-            </a>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
+            </div>
+          </a>
 
-            <!--            <a href="https://smngo100.github.io/projects/dev-hub/"-->
-            <!--               target="_blank"-->
-            <!--               class="card-link"-->
-            <!--            >-->
-            <!--                <div class="card">-->
-            <!--                    <img src="portfolio/project_covers/dev_hub.png"-->
-            <!--                         alt="Developer Resource Hub project"-->
-            <!--                         class="project-cover"-->
-            <!--                         loading="lazy"-->
-            <!--                         decoding="async"-->
-            <!--                    >-->
-            <!--                    <div class="project-info">-->
-            <!--                        <div class="project-title">Developer Resource Hub</div>-->
-            <!--                        <div class="project-description">-->
-            <!--                            Comprehensive resource hub for developer and designers-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                    <div class="language-tag-container">-->
-            <!--                        <div class="language-tag">HTML</div>-->
-            <!--                        <div class="language-tag">CSS</div>-->
-            <!--                        <div class="language-tag">JavaScript</div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </a>-->
+          <!--            <a href="https://smngo100.github.io/projects/dev-hub/"-->
+          <!--               target="_blank"-->
+          <!--               class="card-link"-->
+          <!--            >-->
+          <!--                <div class="card">-->
+          <!--                    <img src="portfolio/project_covers/dev_hub.png"-->
+          <!--                         alt="Developer Resource Hub project"-->
+          <!--                         class="project-cover"-->
+          <!--                         loading="lazy"-->
+          <!--                         decoding="async"-->
+          <!--                    >-->
+          <!--                    <div class="project-info">-->
+          <!--                        <div class="project-title">Developer Resource Hub</div>-->
+          <!--                        <div class="project-description">-->
+          <!--                            Comprehensive resource hub for developer and designers-->
+          <!--                        </div>-->
+          <!--                    </div>-->
+          <!--                    <div class="language-tag-container">-->
+          <!--                        <div class="language-tag">HTML</div>-->
+          <!--                        <div class="language-tag">CSS</div>-->
+          <!--                        <div class="language-tag">JavaScript</div>-->
+          <!--                    </div>-->
+          <!--                </div>-->
+          <!--            </a>-->
 
-            <a href="https://smngo100.github.io/projects/pokedex/"
-               target="_blank"
-               class="card-link"
-            >
-                <div class="card">
-                    <img src="portfolio/project_covers/pokedex.png"
-                         alt="Pokédex project"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">Pokédex</div>
-                        <div class="project-description">
-                            Fetched data through API to retrieve Pokéman stats
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">HTML</div>
-                        <div class="language-tag">CSS</div>
-                        <div class="language-tag">JavaScript</div>
-                    </div>
+          <a
+            href="https://smngo100.github.io/projects/pokedex/"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/pokedex.png"
+                alt="Pokédex project"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">Pokédex</div>
+                <div class="project-description">
+                  Fetched data through API to retrieve Pokéman stats
                 </div>
-            </a>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">HTML</div>
+                <div class="language-tag">CSS</div>
+                <div class="language-tag">JavaScript</div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://devpost.com/software/co2ounter"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/co2ounter.png"
+                alt="Pokédex project"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">co2ounter</div>
+                <div class="project-description">
+                  Chrome extension that tracks how many AI prompts a user makes
+                  and visualizes their activity in a heat map similar to GitHub
+                  commits
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Next.js</div>
+                <div class="language-tag">Node.js</div>
+                <div class="language-tag">Firebase</div>
+                <div class="language-tag">Tailwind CSS</div>
+              </div>
+            </div>
+          </a>
         </div>
 
         <div class="category-title">UI/UX</div>
         <div class="category uiux-category">
-            <a href="https://medium.com/@smngo100/ui-ux-case-study-costco-mobile-website-redesign-3436f16967c8"
-               target="_blank"
-               class="card-link"
-            >
-                <div class="card">
-                    <img src="portfolio/project_covers/costco.svg"
-                         alt="Costco mobile website redesign"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">
-                            Costco Mobile Website Redesign
-                        </div>
-                        <div class="project-description">
-                            Redesigned the user interface and user experience to streamline
-                            navigation and simplify the interface to reduce user friction
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">Figma</div>
-                        <div class="language-tag">Case Study</div>
-                        <div class="language-tag">User Research</div>
-                    </div>
+          <a
+            href="https://medium.com/@smngo100/ui-ux-case-study-costco-mobile-website-redesign-3436f16967c8"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/costco.svg"
+                alt="Costco mobile website redesign"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">Costco Mobile Website Redesign</div>
+                <div class="project-description">
+                  Redesigned the user interface and user experience to
+                  streamline navigation and simplify the interface to reduce
+                  user friction
                 </div>
-            </a>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">Case Study</div>
+                <div class="language-tag">User Research</div>
+              </div>
+            </div>
+          </a>
 
-            <a href="https://medium.com/@smngo100/ui-ux-case-study-mobile-app-sip-blend-b6eff5b30962"
-               target="_blank"
-               class="card-link"
-            >
-                <div class="card">
-                    <img src="portfolio/project_covers/sip_n_blend.webp"
-                         alt="Mobile app Sip & Blend"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">Mobile App: "Sip & Blend"</div>
-                        <div class="project-description">
-                            Designed an intuitive platform enabling users to discover,
-                            organize, and prepare diverse juice and smoothie recipes from
-                            concept to completion
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">Figma</div>
-                        <div class="language-tag">Case Study</div>
-                        <div class="language-tag">Wireframes</div>
-                    </div>
+          <a
+            href="https://medium.com/@smngo100/ui-ux-case-study-mobile-app-sip-blend-b6eff5b30962"
+            target="_blank"
+            class="card-link"
+          >
+            <div class="card">
+              <img
+                src="portfolio/project_covers/sip_n_blend.webp"
+                alt="Mobile app Sip & Blend"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">Mobile App: "Sip & Blend"</div>
+                <div class="project-description">
+                  Designed an intuitive platform enabling users to discover,
+                  organize, and prepare diverse juice and smoothie recipes from
+                  concept to completion
                 </div>
-            </a>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">Case Study</div>
+                <div class="language-tag">Wireframes</div>
+              </div>
+            </div>
+          </a>
 
-            <a id="chip" href="" target="_blank" class="card-link">
-                <div class="card">
-                    <img src="portfolio/project_covers/chip.png"
-                         alt="Mobile app Chip"
-                         class="project-cover"
-                         loading="lazy"
-                         decoding="async"
-                    >
-                    <div class="project-info">
-                        <div class="project-title">Mobile App: "Chip" (Demo coming soon...)</div>
-                        <div class="project-description">
-                            Designed and refined the user interface and experience for
-                            a mobile app that helps users split bills and track
-                            payment history
-                        </div>
-                    </div>
-                    <div class="language-tag-container">
-                        <div class="language-tag">Figma</div>
-                        <div class="language-tag">React Native</div>
-                        <!--                <div class="language-tag">Live App Demo</div>-->
-                    </div>
+          <a id="chip" href="" target="_blank" class="card-link">
+            <div class="card">
+              <img
+                src="portfolio/project_covers/chip.png"
+                alt="Mobile app Chip"
+                class="project-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="project-info">
+                <div class="project-title">
+                  Mobile App: "Chip" (Demo coming soon...)
                 </div>
-            </a>
+                <div class="project-description">
+                  Designed and refined the user interface and experience for a
+                  mobile app that helps users split bills and track payment
+                  history
+                </div>
+              </div>
+              <div class="language-tag-container">
+                <div class="language-tag">Figma</div>
+                <div class="language-tag">React Native</div>
+                <!--                <div class="language-tag">Live App Demo</div>-->
+              </div>
+            </div>
+          </a>
         </div>
-    </section>
-</main>
+      </section>
+    </main>
 
-<footer>
-    <div class="footer-content container">
+    <footer>
+      <div class="footer-content container">
         <div class="social-media-container">
-            <a
-                    href="https://github.com/smngo100"
-                    target="_blank"
-                    class="social-media-icon"
-            >
-                <img src="portfolio/social_media_icons/github-original.svg" alt="GitHub icon">
-            </a>
-            <a
-                    href="https://www.linkedin.com/in/sophia-ngo-166a91358"
-                    target="_blank"
-                    class="social-media-icon"
-            >
-                <img src="portfolio/social_media_icons/linkedin-plain.svg" alt="LinkedIn icon">
-            </a>
+          <a
+            href="https://github.com/smngo100"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <img
+              src="portfolio/social_media_icons/github-original.svg"
+              alt="GitHub icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sophia-ngo-166a91358"
+            target="_blank"
+            class="social-media-icon"
+          >
+            <img
+              src="portfolio/social_media_icons/linkedin-plain.svg"
+              alt="LinkedIn icon"
+            />
+          </a>
         </div>
         <div class="copyright">@ 2025 Sophia N. All Rights Reserved</div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="portfolio/scripts/navbar.js"></script>
-<script src="portfolio/scripts/parallax_effect.js"></script>
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="portfolio/scripts/navbar.js"></script>
+    <script src="portfolio/scripts/parallax_effect.js"></script>
+  </body>
 </html>
